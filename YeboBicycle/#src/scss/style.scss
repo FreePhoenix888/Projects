@@ -1,0 +1,188 @@
+// Variables
+$fontsize: 16px;
+$fontfamily: "Lato";
+$minwidth: 100%;
+$maxWidth: 1100px;
+// Fonts
+@import "fonts.scss";
+// Nullstyle
+@import "nullstyle.scss";
+// Mixins
+@import "mixins.scss";
+//Image background
+@import "ibg.scss";
+// Header
+@import "header.scss";
+// Generation
+@import "generation.scss";
+// Work
+@import "work.scss";
+// Twitter
+@import "twitter.scss";
+// Shop
+@import "shop.scss";
+// Mailing
+@import "mailing.scss";
+// Footer
+@import "footer.scss";
+
+body {
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+._container {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  @include media(desktop) {
+    padding: 0 35px;
+  }
+}
+
+.intro__bg {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+// Icon-menu ==============================================
+.icon-menu {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 2;
+  right: 20px;
+  top: 0;
+
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 4px;
+    background: black;
+
+    &:nth-child(1) {
+      top: 0;
+      transition: 0.2s ease-in 0.2s;
+    }
+    &:nth-child(2) {
+      top: 8px;
+      transition: 0.3s ease-in;
+    }
+    &:nth-child(3) {
+      top: 8px;
+      opacity: 0;
+      transition: 0.3s ease-in;
+    }
+    &:nth-child(4) {
+      bottom: 0;
+      transition: 0.2s ease-in 0.2s;
+    }
+  }
+
+  // icon-menu.active
+  &.active {
+    // icon-menu.active span
+    span {
+      &:nth-child(1) {
+        transform: translate(0, -5px);
+        opacity: 0;
+        transition: 0.2s ease-in;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        transition: 0.2s ease-in 0.2s;
+      }
+      &:nth-child(3) {
+        opacity: 100%;
+        transform: rotate(-45deg);
+        transition: 0.2s ease-in 0.2s;
+      }
+      &:nth-child(4) {
+        transform: translate(0, 5px);
+        opacity: 0;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+}
+
+// Common ==============================================
+.logo {
+}
+
+.title {
+  color: #353738;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+.text {
+  font-size: 16px;
+  color: #848789;
+  line-height: 30px;
+}
+
+// Item ==============================================
+.item {
+  display: block;
+  position: relative;
+  height: 100%;
+  // .item__logo
+
+  &__logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    z-index: 1;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      background: rgba(100, 194, 158, 0.7);
+    }
+
+    // .item__logo-text
+    &-text {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 10px 0 0 0;
+    }
+  }
+
+  // .item__img
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+// Slider ==============================================
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider-wrapper {
+  display: flex;
+}
+.swiper-slide {
+}

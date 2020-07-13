@@ -1,0 +1,82 @@
+.twitter {
+  padding: 124px 0 68px 0;
+  background: #f7f7f7;
+
+  // .twitter__slider
+
+  &__slider {
+    max-width: 1066px;
+    margin: 0 auto;
+
+    .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      border: 1px solid #c8c8c8;
+      background: transparent;
+    }
+    .swiper-pagination-bullet-active {
+      background: #a9afb3;
+      border: none;
+    }
+  }
+
+  // .twitter__content
+
+  &__content {
+    padding: 0 0 94px 0;
+  }
+
+  // .twitter__item
+
+  &__item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  // .twitter__img
+
+  &__img {
+    margin: 0 0 37px 0;
+  }
+
+  // .twitter__title
+
+  &__title {
+    font-family: MyriadPro;
+    margin: 0 0 26px 0;
+  }
+
+  // .twitter__time
+
+  &__time {
+    font-size: 18px;
+    color: #848789;
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+
+  // .twitter__text
+
+  &__text {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  // .twitter__pagination
+
+  &__pagination {
+  }
+
+  // .twitter__scrollbar
+
+  &__scrollbar {
+  }
+}
+
+.title {
+}
+.text {
+}

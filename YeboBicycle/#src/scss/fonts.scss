@@ -1,0 +1,17 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: quote($font_name);
+    font-display: swap;
+    src: url("../fonts/#{$font_name}/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{$font_name}/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$font_name}/#{$file_name}.ttf") format("ttf");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font(Lato, Lato-Light, 300, normal);
+@include font(Lato, Lato-Regular, 400, normal);
+@include font(Lato, Lato-Italic, 400, italic);
+@include font(Lato, Lato-Bold, 700, normal);
+@include font(MyriadPro, MyriadPro-Regular, 400, normal);

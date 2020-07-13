@@ -1,0 +1,88 @@
+.shop {
+  background: #282f35;
+  padding: 0 0 75px 0;
+
+  // .shop__main-row
+
+  &__main-row {
+    display: flex;
+    @include media(landscapemobile) {
+      flex-flow: column nowrap;
+    }
+    margin: 0 0 75px 0;
+  }
+
+  // .shop__row
+
+  &__row {
+    flex: 0 1 33.333%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  // .shop__column
+
+  &__column {
+    flex: 0 1 50%;
+    // .shop__column_big
+
+    &_big {
+      flex: 0 1 100%;
+    }
+    // .shop__column_little
+  }
+
+  // .shop__item
+
+  &__item {
+    // .shop__item_high
+    &_high {
+      padding: 0 0 202.405% 0;
+    }
+    // .shop__item .item__logo
+    & .item__logo {
+      visibility: hidden;
+      transition: 0.35s ease-in;
+    }
+    &:hover {
+      & .item__logo {
+        visibility: visible;
+      }
+    }
+    // .shop__item_little
+
+    &_little {
+      padding: 0 0 100% 0;
+      @include media(landscapemobile) {
+        padding: 0 0 100% 0;
+      }
+    }
+
+    // .shop__item_big
+    &_big {
+      padding: 0 0 50% 0;
+    }
+  }
+
+  // .shop__button
+
+  &__button {
+    display: block;
+    padding: 19px 0;
+    width: 300px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.item {
+  // .item__logo
+
+  &__logo {
+    display: block;
+  }
+}
